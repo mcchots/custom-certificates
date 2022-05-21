@@ -1,5 +1,14 @@
 #!/bin/bash
 
+if [[ -z "$1" ]] || [[ -z "$2" ]]
+then
+    echo "Argument not present."
+    echo "Usage $0 certfile certname"
+
+    exit 99
+fi
+
+
 ### https://github.com/ThomasLeister/root-certificate-deployment/blob/master/linux-browser-import.sh
 
 ### Script installs root.cert.pem to certificate trust store of applications using NSS
